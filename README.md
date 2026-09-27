@@ -100,18 +100,4 @@ src/
 supabase/schema.sql        Database + RLS
 ```
 
-## Deploying (free tier)
-- **App:** push to GitHub, import into [Vercel](https://vercel.com), add the same
-  env vars. API routes use the Node runtime for the embedding model.
-- **Data:** your Supabase project is already live.
 
-## Ideas to extend
-- Drag-and-drop columns (swap the card's move buttons for `@hello-pangea/dnd`).
-- "Similar jobs" using a pgvector nearest-neighbor query on the stored vectors.
-- Analytics: response rate, fit-score distribution, time-in-stage.
-- Fetch-from-URL job import (respecting each site's terms).
-
-## Notes on free-tier limits
-Groq's free tier is generous but shared; heavy bursts may hit a rate limit. The
-LLM wrapper is the single place to add backoff or re-point to another
-OpenAI-compatible provider (OpenRouter, Cerebras) if a model is retired.
